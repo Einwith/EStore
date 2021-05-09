@@ -7,18 +7,19 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @NoArgsConstructor
-public class CartItems {
+public class Product {
+
     @Id
     private Long id;
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-    @OneToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
-    private int quantity;
+    @OneToOne(mappedBy = "product")
+    private CartItems cartitems;
+    private String name;
+    private String desc;
+    private int price;
     @Basic
     private LocalDateTime create_at;
     @Basic
     private LocalDateTime modified_at;
+
 }
+

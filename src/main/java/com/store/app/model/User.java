@@ -19,8 +19,8 @@ public class User {
     private String first_name;
     private String last_name;
     private String telephone;
-    @OneToOne(mappedBy = "user")
-    private CartItems cartitems;
+    @OneToMany(mappedBy = "user")
+    private List<CartItems> cartitemses;
     @Basic
     private LocalDateTime create_at;
     @Basic
