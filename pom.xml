@@ -69,6 +69,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>StoreApi</finalName>
 	</build>
 
 </project>

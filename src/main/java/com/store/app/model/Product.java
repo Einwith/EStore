@@ -7,19 +7,17 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Product {
 
     @Id
-    private Long id;
+    private String id;
     @OneToOne(mappedBy = "product")
     private CartItems cartitems;
     private String name;
     private String desc;
     private int price;
-    @Basic
-    private LocalDateTime create_at;
-    @Basic
-    private LocalDateTime modified_at;
+
 
 }
 
